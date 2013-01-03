@@ -9,11 +9,13 @@
     <div style="margin-left: 25px; width: auto">
         <h3>Please fill out the form below.</h3>
     </div>
+
     {% if form.errors %}
         <div style="width: 300px;" class="alert alert-error">
-        <p>{{ form.errors }}</p>
+            <p>{{ form.errors }}</p>
         </div>
     {% endif %}
+
     <div style="margin-left: 25px; width: 300px;">
         <form id="studentForm" action="" method="POST" class="form-actions">
             {% for field in form %}
@@ -26,5 +28,5 @@
             <input type="reset" class="btn" value="clear">
         </form>
     </div>
-    
+
 {% endblock %}
