@@ -10,27 +10,27 @@ $(document).ready(function() {
 //        return this.optional(element) || /^[a-zA-Z]{2,20}$/i.test(value);
 //    }, "This field is 2-20 characters");
 
-//    $.validator.addMethod("password_field", function (value, element) {
-//        return this.optional(element) || /^[a-zA-Z0-9]{6,20}$/i.test(value);
-//    }, "Password is 6-20 characters");
-//
-//    $.validator.addMethod("phone", function (value, element) {
-//        return this.optional(element) || /^[0-9]{5,10}$/i.test(value);
-//    }, "Phone is 5-10 numbers");
-
     $("#studentForm").validate({
 
         rules: {
-            first_name: {
+
+            last_name: {
                 name_field: true,
+                minlength: 2,
+                maxlength: 20,
                 required: true
             },
 
             last_name: {
+                name_field: true,
+                minlength: 2,
+                maxlength: 20,
                 required: true
             },
 
             password: {
+                minlength: 6,
+                maxlength: 20,
                 password_field: true,
                 required: true
             },
@@ -41,6 +41,8 @@ $(document).ready(function() {
             },
 
             phone: {
+                minlength: 5,
+                maxlength: 10,
                 digits: true,
                 required: true
             },
@@ -48,7 +50,11 @@ $(document).ready(function() {
             find_about_us: {
                 required: true
             },
-            agree: "required"
+
+            agree: {
+                required: true
+            }
+
         }
     });
 });

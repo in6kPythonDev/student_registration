@@ -1096,7 +1096,6 @@ $.extend($.validator, {
         },
 
 
-
 		// http://docs.jquery.com/Plugins/Validation/Methods/url
 		url: function(value, element) {
 			// contributed by Scott Gonzalez: http://projects.scottsplayground.com/iri/
