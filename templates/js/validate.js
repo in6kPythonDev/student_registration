@@ -22,14 +22,11 @@ $(document).ready(function() {
 
         rules: {
             first_name: {
-//                minlength: 2,
-//                maxlenght: 7,
                 name_field: true,
                 required: true
             },
 
             last_name: {
-//                name_field: true,
                 required: true
             },
 
@@ -52,18 +49,6 @@ $(document).ready(function() {
                 required: true
             },
             agree: "required"
-        },
-        messages: {
-
-//            password: {
-//                required: "Please provide a password"
-//            },
-//
-//            email: "Please enter a valid email address",
-//
-//            find_about_us: "Please select",
-//
-//            agree: "Please accept"
         }
     });
 });
