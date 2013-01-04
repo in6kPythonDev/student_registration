@@ -6,23 +6,19 @@ $.validator.setDefaults({
 
 $(document).ready(function() {
 
-//    $.validator.addMethod("name_field", function (value, element) {
-//        return this.optional(element) || /^[a-zA-Z]{2,20}$/i.test(value);
-//    }, "This field is 2-20 characters");
-
     $("#studentForm").validate({
 
         rules: {
 
-            last_name: {
-                name_field: true,
+            first_name: {
+                text_field: true,
                 minlength: 2,
                 maxlength: 20,
                 required: true
             },
 
             last_name: {
-                name_field: true,
+                text_field: true,
                 minlength: 2,
                 maxlength: 20,
                 required: true

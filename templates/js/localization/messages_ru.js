@@ -20,5 +20,5 @@ jQuery.extend(jQuery.validator.messages, {
         range: jQuery.validator.format("Пожалуйста, введите число от {0} до {1}."),
         max: jQuery.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
         min: jQuery.validator.format("Пожалуйста, введите число, большее или равное {0}."),
-        name_field: "Пожалуйста, вводите только буквы."
+        text_field: "Пожалуйста, вводите только буквы."
 });

@@ -17,7 +17,7 @@ def edit(request, student_id=None):
         try:
             student = Student.objects.get(pk=student_id)
         except Student.DoesNotExist:
-            
+
             return HttpResponseRedirect('/add_student/show_students')
 
     if request.POST:
