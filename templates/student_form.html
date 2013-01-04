@@ -3,14 +3,14 @@
 {% block title %} Student form{% endblock %}
 
 {% block content %}
-    <form action="/i18n/setlang/" method="POST">{% csrf_token %}
-        <input name="next" type="hidden" value="/accounts/profile/"/><br/>
+    <form action="/i18n/setlang/" method="post">
+        <input name="next" type="hidden" value="/next/page/" />
         <select name="language">
             {% for lang in LANGUAGES %}
                 <option value="{{ lang.0 }}">{{ lang.1 }}</option>
             {% endfor %}
-        </select><br/>
-        <input type="submit" value="change"/>
+        </select>
+        <input type="submit" value="Go" />
     </form>
     <style>
         div.alert.alert-error input {
