@@ -14,11 +14,7 @@ def edit(request, student_id=None):
     if student_id is None:
         student = Student()
     else:
-        try:
-            student = Student.objects.get(pk=student_id)
-        except Student.DoesNotExist:
-
-            return HttpResponseRedirect('/add_student/show_students')
+        student = get_object_or_404(Student, id=student_id)
 
     if request.POST:
         form = StudentForm(request.POST, instance=student)
