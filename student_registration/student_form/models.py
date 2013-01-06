@@ -2,8 +2,6 @@ from django.db import models
 
 class AboutInfo(models.Model):
     name = models.CharField(max_length = 100)
-    test_migration = models.BooleanField()
-    test_migration_two = models.CharField(max_length=100, null=True)
 
     def __unicode__(self):
         return self.name

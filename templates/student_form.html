@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
 
-{% block title %} Student form{% endblock %}
+
+{% load i18n %}
+
+{% block title %} {% trans "Student form" %}{% endblock %}
 
 {% block content %}
-    <form action="/i18n/setlang/" method="post">
-        <input name="next" type="hidden" value="/next/page/" />
+    <form action="/i18n/setlang/" method="post">{% csrf_token %}
+        <input name="next" type="hidden" value="/"/>
         <select name="language">
             {% for lang in LANGUAGES %}
                 <option value="{{ lang.0 }}">{{ lang.1 }}</option>
             {% endfor %}
         </select>
-        <input type="submit" value="Go" />
+        <input type="submit" value="{% trans "Go" %}"/>
     </form>
     <style>
         div.alert.alert-error input {
@@ -18,7 +21,7 @@
         }
     </style>
     <div style="margin-left: 25px; width: auto">
-        <h3>Please fill out the form below.</h3>
+        <h3>{% trans "Please fill out the form below." %}</h3>
     </div>
     {% if form.errors %}
         <div style="width: 300px;" class="alert alert-error">
@@ -33,8 +36,8 @@
                     <dd>{{ field }}</dd>
                 </div>
             {% endfor %}
-            <br/><input type="submit" class="btn btn-primary" value="Save">
-            <input type="reset" class="btn" value="clear">
+            <br/><input type="submit" class="btn btn-primary" value="{% trans "Save" %}">
+            <input type="reset" class="btn" value="{% trans "clear"%}">
         </form>
     </div>
 {% endblock %}
