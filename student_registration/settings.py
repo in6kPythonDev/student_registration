@@ -50,7 +50,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/home/student1/PycharmProjects/add_student/templates'
+MEDIA_ROOT = '/home/eddie/PycharmProjects/student_registration/templates'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -61,7 +61,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/student1/PycharmProjects/add_student/add_student/student_form/static_collected'
+STATIC_ROOT = '/home/eddie/PycharmProjects/student_registration/student_registration/student_form/static_collected'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -69,7 +69,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    '/home/student1/PycharmProjects/add_student/templates',
+    '/home/eddie/PycharmProjects/student_registration/templates',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -102,12 +102,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'add_student.urls'
+ROOT_URLCONF = 'student_registration.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'add_student.wsgi.application'
+WSGI_APPLICATION = 'student_registration.wsgi.application'
 
-TEMPLATE_DIRS = ('/home/student1/PycharmProjects/add_student/templates',)
+TEMPLATE_DIRS = ('/home/eddie/PycharmProjects/student_registration/templates',)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -120,7 +120,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'add_student.student_form',
+    'student_registration.student_form',
     'south',
 )
 

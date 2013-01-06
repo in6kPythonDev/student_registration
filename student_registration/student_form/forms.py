@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from django.forms import PasswordInput, ModelForm, BooleanField, RegexField
-from add_student.student_form import models
+from student_registration.student_form import models
 from django.utils.translation import ugettext_lazy as _
 
 
