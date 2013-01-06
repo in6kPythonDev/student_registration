@@ -27,7 +27,6 @@ $(document).ready(function() {
             password: {
                 minlength: 6,
                 maxlength: 20,
-                password_field: true,
                 required: true
             },
 
