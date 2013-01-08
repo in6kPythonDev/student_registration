@@ -35,6 +35,7 @@ LANGUAGES = (
     ('en', 'English'),
 )
 
+CSRF_COOKIE_DOMAIN = '.student_registration.'
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
