@@ -42,6 +42,7 @@ LOCALE_PATHS = (
     '/home/student1/PycharmProjects/student_registration/locale',
     )
 
+CSRF_COOKIE_DOMAIN = '.student_registration.'
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
